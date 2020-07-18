@@ -1,7 +1,7 @@
 const FILES_TO_CACHE = [
     "/",
     "index.html",
-    "style.css",
+    "styles.css",
     "index.js",
     "manifest.webmanifest",
     "/icons/icon-192x192.png",
@@ -41,7 +41,7 @@ self.addEventListener("activate", function (evt) {
 
 self.addEventListener('fetch', function (evt) {
     // code to handle requests goes here
-    if (evt.request.url.icludes('/api/')) {
+    if (evt.request.url.includes('/api/')) {
         console.log('[Service Worker] Fetch (data', evt.request.url);
 
         evt.respondWith(
